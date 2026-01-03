@@ -11,25 +11,6 @@
 
     <header>
         <div class="hero">
-            <!-- <pre id="ascii-cube" aria-label="Rotating ASCII cube banner"></pre>
-            <script>
-            (async () => {
-            const host = document.getElementById('ascii-cube');
-            try {
-                const res = await fetch('cube.json', { cache: 'no-store' });
-                const data = await res.json();
-                const frames = (data.frames || []).sort((a,b)=> (a.number||0)-(b.number||0));
-                if (!frames.length) { host.textContent = 'No frames found.'; return; }
-                let i = 0; const fps = 4, interval = 1000 / fps;
-                let t = setInterval(()=>{ host.textContent = frames[i++ % frames.length].asc_art; }, interval);
-                host.addEventListener('mouseenter', ()=> (t && clearInterval(t), t=null));
-                host.addEventListener('mouseleave', ()=> (!t && (t=setInterval(()=>{ host.textContent = frames[i++ % frames.length].asc_art; }, interval))));
-            } catch (e) {
-                host.textContent = 'Failed to load ASCII cube.';
-            }
-            })();
-            </script> -->
-            <!-- <img src="home_images/ising_loop.gif" alt="ising_evolution_animation"> -->
             <center>
                 <img src="home_images/dvc_uop_07.png" style="width: 40%; height: 40%;" alt="DVC UOP Logo 7"><img src="home_images/dvc_uop_03.png" style="width: 40%; height: 40%;" alt="DVC UOP Logo 3">
             </center>
@@ -52,13 +33,10 @@
             <li><a href="projects/dominion_ai/dominion.html">Dominion AI</a></li>
             <li><a href="projects/inquisitorNet/inquisitor.html">InquisitorNet</a></li>
             <li><a href="projects/civicsim/civicsim.html">CivicSim</a></li>
-            <!-- <li><a href="projects/scp/scp.html">SCP Wiki Entries</a></li> -->
         </ul>
         </nav>
 
         <main>
-            <!-- <span style="position: relative; top: -0.4%; left: 19%"><i>Figures used on this website are generated with GPT-5.</i></span> -->
-
             <section id="about">
                 <h2>About Me</h2>
                 <p>
@@ -71,11 +49,6 @@
                     and creative applications of AI. I plan to continue refining
                     these projects while pursuing graduate studies in related fields.
                 </p>
-                <!-- <p>
-                    MS Engineering Science • University of the Pacific<br>
-                    BS Physics • University of the Pacific<br>
-                </p> -->
-                <!-- &nbsp;•&nbsp; -->
                 <hr>
                 <p>
                     &nbsp;•&nbsp;
@@ -89,24 +62,6 @@
                         <a href="https://github.com/johnson-liu-repo" target="_blank" rel="noopener">
                         https://github.com/johnson-liu-repo/
                         </a>
-                    <!-- <br>
-                    &nbsp;•&nbsp;
-                    <strong>LinkedIn: </strong>
-                        <a href="https://www.linkedin.com/in/johnson-liu-/">
-                        https://www.linkedin.com/in/johnson-liu-/
-                        </a>
-                    <br>
-                    <!-- &nbsp;•&nbsp;
-                    <strong>Substack: </strong>
-                        <a href="https://johnsonliucode.substack.com/">
-                        https://johnsonliucode.substack.com/
-                        </a> -->
-
-                <!-- <br>
-                <br>
-                <br>
-                <br> -->
-
             </section>
 
             <section id="ai ml projects">
@@ -188,7 +143,7 @@
                         </p>
                     </a>
 
-                    <a class="project-card" href="projects/CivicSim/civicsim.html">
+                    <a class="project-card" href="projects/civicsim/civicsim.html">
                         <img src="projects/civicsim/civicsim_v02.png" alt="CivicSim thumbnail">
                         <h3>CivicSim</h3>
                         <p>
@@ -215,7 +170,7 @@
 
                 <div class="project-grid">
 
-                    <a class="project-card" href="projects/SCP/scp.html">
+                    <a class="project-card" href="projects/scp/scp.html">
                         <img src="projects/scp/scp.png" alt="SCP thumbnail">
                         <h3>SCP Wiki Entries</h3>
                         <p>
@@ -248,11 +203,6 @@
                     </a>
                 </div>
             </section>
-
-            <!-- <section id="community">
-                <h2>Community Outreach</h2>
-
-            </section> -->
 
         </main>
 
