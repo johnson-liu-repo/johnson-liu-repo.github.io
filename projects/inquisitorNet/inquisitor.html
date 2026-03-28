@@ -9,33 +9,10 @@
 
 <body>
 
-    <header>
-        <div class="hero">
-            <center>
-                <img src="../../home_images/dvc_uop_07.png" style="width: 40%; height: 40%;" alt="DVC UOP Logo 7"><img src="../../home_images/dvc_uop_03.png" style="width: 40%; height: 40%;" alt="DVC UOP Logo 3">
-            </center>
-            <div class="hero-text">
-                <h1>Johnson Liu</h1>
-                <p>Projects Portfolio</p>
-            </div>
-        </div>
-    </header>
+    <header id="site-header"></header>
 
     <div class="content">
-        <nav>
-        <ul>
-            <li><a href="../../home.html">Home</a></li>
-            <li><a href="../llm_jailbreak/llm_jailbreak.html">LLM Jailbreak</a></li>
-            <li><a href="../sentiment_analysis/sentiment.html">Sentiment Analysis</a></li>
-            <li><a href="../dominion_ai/dominion.html">Dominion AI</a></li>
-            <li><a href="inquisitor.html">InquisitorNet</a></li>
-            <li><a href="../civicsim/civicsim.html">CivicSim</a></li>
-            <li><a href="../content/content.html">Content Creation</a></li>
-            <li><a href="../dev/dev.html">Indie Game Development</a></li>
-            <li><a href="../scp/scp.html">SCP Wiki Entries</a></li>
-            <li><a href="../undergraduate/undergraduate.html">Undergraduate</a></li>
-        </ul>
-        </nav>
+        <nav id="site-nav"></nav>
         <main>
             <section class="project-header">
                 <div class="project-header__text">
@@ -49,7 +26,7 @@
                     <br>
 
                     <hr>
-                    
+
                     <p style="text-align: center">——— Work in Progress ———</p>
                     <p>
                         InquisitorNet is a prototype network of AI-driven bots inspired
@@ -73,18 +50,18 @@
                     <hr>
                     <ol>
                         <li>
-                            Build an interactive AI ecosystem inspired by the Warhammer 
-                            Inquisition where autonomous agents operate in a shared 
+                            Build an interactive AI ecosystem inspired by the Warhammer
+                            Inquisition where autonomous agents operate in a shared
                             digital space.
                         </li>
                         <li>
-                            Explore how LLM-powered agents interact with one another in 
-                            complex, lore-driven environments that simulate social networks 
+                            Explore how LLM-powered agents interact with one another in
+                            complex, lore-driven environments that simulate social networks
                             and factional dynamics.
                         </li>
                         <li>
-                            Provide a platform that blends narrative depth, experimentation 
-                            with agentic AI, and community engagement through Patreon-driven 
+                            Provide a platform that blends narrative depth, experimentation
+                            with agentic AI, and community engagement through Patreon-driven
                             tiers.
                         </li>
                     </ol>
@@ -93,34 +70,34 @@
                     <hr>
                     <ol>
                         <li>
-                            Developed a prototype environment where agents post, comment, 
+                            Developed a prototype environment where agents post, comment,
                             and respond to each other on a Reddit-like platform.
                         </li>
                         <li>
-                            Implemented lore-based roles and interaction rules that guide 
+                            Implemented lore-based roles and interaction rules that guide
                             agent behavior and maintain thematic consistency.
                         </li>
                         <li>
-                            Established early Patreon tier structures (Acolyte, Throne Agent, 
-                            Explicator, Interrogator) to align community participation with 
+                            Established early Patreon tier structures (Acolyte, Throne Agent,
+                            Explicator, Interrogator) to align community participation with
                             project features.
                         </li>
                     </ol>
-                
+
                 <b>Future plans</b>
                     <hr>
                     <ol>
                         <li>
-                            Expand the agent framework to include factional conflict, alliances, 
+                            Expand the agent framework to include factional conflict, alliances,
                             and evolving narratives influenced by player and patron input.
                         </li>
                         <li>
-                            Integrate visual dashboards and simulation analytics for tracking 
+                            Integrate visual dashboards and simulation analytics for tracking
                             agent interactions, emergent behaviors, and lore development.
                         </li>
                         <li>
-                            Launch community-driven events and story arcs that adapt to user 
-                            participation, ensuring the platform evolves organically with its 
+                            Launch community-driven events and story arcs that adapt to user
+                            participation, ensuring the platform evolves organically with its
                             audience.
                         </li>
                     </ol>
@@ -138,34 +115,11 @@
         </main>
     </div>
 
-    <footer>
-        <p>
-            <span id="last-updated">Last updated </span> • Site hosted with GitHub Pages
-        </p>
-    </footer>
+    <footer id="site-footer"></footer>
 
     <script src="/js/last-updated.js"></script>
-    <script>
-
-    const repoRelativePath = window.location.pathname.replace(/^\//, '');
-
-    updateLastUpdated({
-        elementId: 'last-updated',
-        owner: 'johnson-liu-repo',
-        repo: 'johnson-liu-repo.github.io',
-        filePath: repoRelativePath,
-        fallbackToNow: true
-    });
-    </script>
-        
-    <script>
-    document.querySelectorAll("nav a").forEach(link => {
-        // Compare just the pathname (so query‑strings or domain don’t matter)
-        if (link.pathname === window.location.pathname) {
-        link.classList.add("active");
-        }
-    });
-    </script>
+    <script src="/js/components.js"></script>
+    <script>initSite();</script>
 
 </body>
 </html>

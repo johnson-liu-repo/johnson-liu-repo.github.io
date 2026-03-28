@@ -9,32 +9,10 @@
 
 <body>
 
-    <header>
-        <div class="hero">
-            <center>
-                <img src="../../home_images/dvc_uop_07.png" style="width: 40%; height: 40%;" alt="DVC UOP Logo 7"><img src="../../home_images/dvc_uop_03.png" style="width: 40%; height: 40%;" alt="DVC UOP Logo 3">
-            </center>
-            <div class="hero-text">
-                <h1>Johnson Liu</h1>
-                <p>Projects Portfolio</p>
-            </div>
-        </div>
-    </header>
+    <header id="site-header"></header>
 
     <div class="content">
-        <nav>
-        <ul>
-            <li><a href="../../home.html">Home</a></li>
-            <li><a href="../llm_jailbreak/llm_jailbreak.html">LLM Jailbreak</a></li>
-            <li><a href="../sentiment_analysis/sentiment.html">Sentiment Analysis</a></li>
-            <li><a href="../dominion_ai/dominion.html">Dominion AI</a></li>
-            <li><a href="civicsim.html">CivicSim</a></li>
-            <li><a href="../content/content.html">Content Creation</a></li>
-            <li><a href="../dev/dev.html">Indie Game Development</a></li>
-            <li><a href="../scp/scp.html">SCP Wiki Entries</a></li>
-            <li><a href="../undergraduate/undergraduate.html">Undergraduate</a></li>
-        </ul>
-        </nav>
+        <nav id="site-nav"></nav>
 
         <main>
             <section class="project-header">
@@ -49,7 +27,7 @@
                     <br>
 
                     <hr>
-                    
+
                     <p style="text-align: center">——— Work in Progress ———</p>
                     <p>
                         CivicSim is an interactive civic simulation game where players
@@ -70,50 +48,50 @@
                     <hr>
                     <ol>
                         <li>
-                            Build a patron-driven civic simulation where community members 
+                            Build a patron-driven civic simulation where community members
                             vote on policies that shape a simulated society.
                         </li>
                         <li>
-                            Present transparent, data-driven outcomes through narrative 
+                            Present transparent, data-driven outcomes through narrative
                             briefs that explain how choices impact key societal metrics.
                         </li>
                         <li>
-                            Provide an engaging, collaborative experience where participants 
+                            Provide an engaging, collaborative experience where participants
                             can immediately see the effects of their decisions.
                         </li>
                     </ol>
-                
+
                 <b>Current progress</b><br>
                     <hr>
                     <ol>
                         <li>
-                            Core loop implemented: weekly ballots, policy voting, deterministic 
+                            Core loop implemented: weekly ballots, policy voting, deterministic
                             simulation ticks, and narrative brief generation.
                         </li>
                         <li>
-                            Next.js frontend and FastAPI backend scaffolded, with Patreon 
+                            Next.js frontend and FastAPI backend scaffolded, with Patreon
                             authentication and early results archive features in place.
                         </li>
                         <li>
-                            Beta development underway: provenance panels, results archive, 
-                            and disclosure labels integrated; automation, analytics, and 
+                            Beta development underway: provenance panels, results archive,
+                            and disclosure labels integrated; automation, analytics, and
                             dashboards in progress.
                         </li>
                     </ol>
-                
+
                 <b>Future plans</b><br>
                     <hr>
                     <ol>
                         <li>
-                            Complete Beta features including automated weekly ticks, patron 
+                            Complete Beta features including automated weekly ticks, patron
                             dashboards, event systems, and news feeds.
                         </li>
                         <li>
-                            Prepare for production with accessibility audits, disaster recovery, 
+                            Prepare for production with accessibility audits, disaster recovery,
                             LLM cost management, and communication hooks (Discord/Email).
                         </li>
                         <li>
-                            Expand with faction/party systems, multi-issue voting, player-authored 
+                            Expand with faction/party systems, multi-issue voting, player-authored
                             policies, and AI-driven in-unverse newsletters.
                         </li>
                     </ol>
@@ -133,34 +111,11 @@
 
     </div>
 
-    <footer>
-        <p>
-            <span id="last-updated">Last updated </span> • Site hosted with GitHub Pages
-        </p>
-    </footer>
+    <footer id="site-footer"></footer>
 
     <script src="/js/last-updated.js"></script>
-    <script>
-
-    const repoRelativePath = window.location.pathname.replace(/^\//, '');
-
-    updateLastUpdated({
-        elementId: 'last-updated',
-        owner: 'johnson-liu-repo',
-        repo: 'johnson-liu-repo.github.io',
-        filePath: repoRelativePath,
-        fallbackToNow: true
-    });
-    </script>
-    
-    <script>
-    document.querySelectorAll("nav a").forEach(link => {
-        // Compare just the pathname (so query‑strings or domain don’t matter)
-        if (link.pathname === window.location.pathname) {
-        link.classList.add("active");
-        }
-    });
-    </script>
+    <script src="/js/components.js"></script>
+    <script>initSite();</script>
 
 </body>
 </html>

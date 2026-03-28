@@ -10,32 +10,10 @@
 
 <body>
 
-    <header>
-        <div class="hero">
-            <center>
-                <img src="../../home_images/dvc_uop_07.png" style="width: 40%; height: 40%;" alt="DVC UOP Logo 7"><img src="../../home_images/dvc_uop_03.png" style="width: 40%; height: 40%;" alt="DVC UOP Logo 3">
-            </center>
-            <div class="hero-text">
-                <h1>Johnson Liu</h1>
-                <p>Projects Portfolio</p>
-            </div>
-        </div>
-    </header>
+    <header id="site-header"></header>
 
     <div class="content">
-        <nav>
-        <ul>
-            <li><a href="../../home.html">Home</a></li>
-            <li><a href="llm_jailbreak.html">LLM Jailbreak</a></li>
-            <li><a href="../sentiment_analysis/sentiment.html">Sentiment Analysis</a></li>
-            <li><a href="../dominion_ai/dominion.html">Dominion AI</a></li>
-            <li><a href="../civicsim/civicsim.html">CivicSim</a></li>
-            <li><a href="../content/content.html">Content Creation</a></li>
-            <li><a href="../dev/dev.html">Indie Game Development</a></li>
-            <li><a href="../scp/scp.html">SCP Wiki Entries</a></li>
-            <li><a href="../undergraduate/undergraduate.html">Undergraduate</a></li>
-        </ul>
-        </nav>
+        <nav id="site-nav"></nav>
         <main>
             <section class="project-header">
                 <div class="project-header__text">
@@ -51,17 +29,17 @@
                     <p style="text-align: center">——— Work in Progress ———</p>
 
                     <p>
-                        This mini jailbreak stress test dashboard is an app for stress testing 
-                        large language models (LLMs) with custom and premade prompts gathered 
+                        This mini jailbreak stress test dashboard is an app for stress testing
+                        large language models (LLMs) with custom and premade prompts gathered
                         from open-source projects.
-                        
-                        This tool allows for interactive monitoring of attacks on various models 
-                        and the visualization of these models' performance in defending against 
+
+                        This tool allows for interactive monitoring of attacks on various models
+                        and the visualization of these models' performance in defending against
                         such attacks.
-                        
-                        The app provides a real-time display in the form of a prompt refusal 
-                        table and graphs that lets the user quickly spot successful jailbreaks 
-                        from the provided prompts along with jailbreaking trends that emerge from 
+
+                        The app provides a real-time display in the form of a prompt refusal
+                        table and graphs that lets the user quickly spot successful jailbreaks
+                        from the provided prompts along with jailbreaking trends that emerge from
                         the use of a variety of prompts across multiple LLMs.
                     </p>
 
@@ -87,49 +65,49 @@
                     <hr>
                     <ol>
                         <li>
-                            Build transparent, reproducible evaluations of LLM capability and 
+                            Build transparent, reproducible evaluations of LLM capability and
                             safety (with a focus on jailbreak susceptibility).
                         </li>
                         <li>
-                            Create practical tools and write-ups that help students, researchers, 
+                            Create practical tools and write-ups that help students, researchers,
                             and engineers reason about model behavior.
                         </li>
                         <li>
-                            Contribute open resources (code, datasets, and reports) that advance 
+                            Contribute open resources (code, datasets, and reports) that advance
                             LLM alignment and safety.
                         </li>
                     </ol>
-                
+
                 <b>Current progress</b>
                     <hr>
                     <ol>
                         <li>
-                            Implemented a Streamlit-based Jailbreak Stress-Test Dashboard with 
+                            Implemented a Streamlit-based Jailbreak Stress-Test Dashboard with
                             multi-model runs, batch prompting, logging, and results tables.
                         </li>
                         <li>
-                            Organized a library of attack prompts and began benchmarking 
+                            Organized a library of attack prompts and began benchmarking
                             success/refusal rates across commercial and open-weight models.
                         </li>
                         <li>
-                            Drafted portfolio copy and literature notes covering jailbreak 
+                            Drafted portfolio copy and literature notes covering jailbreak
                             taxonomy, defenses, and evaluation methods.
                         </li>
                     </ol>
-                
+
                 <b>Future plans</b>
                     <hr>
                     <ol>
                         <li>
-                            Add automated red-teaming (model-generated attacks), attack families, 
+                            Add automated red-teaming (model-generated attacks), attack families,
                             and per-model safety scorecards to the dashboard.
                         </li>
                         <li>
-                            Submit a prompt response dataset with evaluation scripts and baseline 
+                            Submit a prompt response dataset with evaluation scripts and baseline
                             metrics to JailbreakBench.
                         </li>
                         <li>
-                            Test defenses (prompt hardening, safety-tuned adapters, retrieval 
+                            Test defenses (prompt hardening, safety-tuned adapters, retrieval
                             guardrails) and publish a short report with findings.
                         </li>
                     </ol>
@@ -151,11 +129,11 @@
                 </div>
 
             </section>
-            
+
             <section id="readme-section">
                 <h3>Project Documentation
                     <br>
-                    —                
+                    —
                     <a href="https://github.com/johnson-liu-code/LLM_Jailbreak_Stress_Test_Dashboard" target="_blank" rel="noopener">
                         <small>
                         Visit the GitHub repository for formatted LaTeX
@@ -177,34 +155,11 @@
         </main>
     </div>
 
-    <footer>
-        <p>
-            <span id="last-updated">Last updated </span> • Site hosted with GitHub Pages
-        </p>
-    </footer>
+    <footer id="site-footer"></footer>
 
     <script src="/js/last-updated.js"></script>
-    <script>
-
-    const repoRelativePath = window.location.pathname.replace(/^\//, '');
-
-    updateLastUpdated({
-        elementId: 'last-updated',
-        owner: 'johnson-liu-repo',
-        repo: 'johnson-liu-repo.github.io',
-        filePath: repoRelativePath,
-        fallbackToNow: true
-    });
-    </script>
-        
-    <script>
-    document.querySelectorAll("nav a").forEach(link => {
-        // Compare just the pathname (so query‑strings or domain don't matter)
-        if (link.pathname === window.location.pathname) {
-        link.classList.add("active");
-        }
-    });
-    </script>
+    <script src="/js/components.js"></script>
+    <script>initSite();</script>
 
     <script>
     // Load README from GitHub repository
@@ -212,7 +167,7 @@
         const readmeContainer = document.getElementById('readme-container');
         const owner = 'johnson-liu-repo';
         const repo = 'LLM_Jailbreak_Stress_Test_Dashboard';
-        
+
         try {
             // Fetch rendered HTML from GitHub API
             const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/readme`, {
@@ -220,11 +175,11 @@
                     'Accept': 'application/vnd.github.html'
                 }
             });
-            
+
             if (!response.ok) {
                 throw new Error(`GitHub API returned ${response.status}`);
             }
-            
+
             const html = await response.text();
             readmeContainer.innerHTML = html;
         } catch (error) {

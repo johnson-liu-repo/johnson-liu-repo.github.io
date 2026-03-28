@@ -9,32 +9,10 @@
 
 <body>
 
-    <header>
-        <div class="hero">
-            <center>
-                <img src="../../home_images/dvc_uop_07.png" style="width: 40%; height: 40%;" alt="DVC UOP Logo 7"><img src="../../home_images/dvc_uop_03.png" style="width: 40%; height: 40%;" alt="DVC UOP Logo 3">
-            </center>
-            <div class="hero-text">
-                <h1>Johnson Liu</h1>
-                <p>Projects Portfolio</p>
-            </div>
-        </div>
-    </header>
+    <header id="site-header"></header>
 
     <div class="content">
-        <nav>
-        <ul>
-            <li><a href="../../home.html">Home</a></li>
-            <li><a href="../llm_jailbreak/llm_jailbreak.html">LLM Jailbreak</a></li>
-            <li><a href="../sentiment_analysis/sentiment.html">Sentiment Analysis</a></li>
-            <li><a href="dominion.html">Dominion AI</a></li>
-            <li><a href="../civicsim/civicsim.html">CivicSim</a></li>
-            <li><a href="../content/content.html">Content Creation</a></li>
-            <li><a href="../dev/dev.html">Indie Game Development</a></li>
-            <li><a href="../scp/scp.html">SCP Wiki Entries</a></li>
-            <li><a href="../undergraduate/undergraduate.html">Undergraduate</a></li>
-        </ul>
-        </nav>
+        <nav id="site-nav"></nav>
 
         <main>
             <section class="project-header">
@@ -47,7 +25,7 @@
                     <br>
 
                     <hr>
-                    
+
                     <p style="text-align: center">——— Work in Progress ———</p>
                     <p>
                         Dominion is a deck-building card game with a complex state
@@ -70,40 +48,40 @@
                     <hr>
                     <ol>
                         <li>
-                            Develop a reinforcement learning agent capable of playing the card 
+                            Develop a reinforcement learning agent capable of playing the card
                             game Dominion effectively.
                         </li>
                         <li>
-                            Explore strategies for handling the game's large, partially observable 
-                            state space. 
+                            Explore strategies for handling the game's large, partially observable
+                            state space.
                         </li>
                         <li>
-                            Investigate how evolving strategies emerge in a non-deterministic, 
-                            multi-agent environment. 
+                            Investigate how evolving strategies emerge in a non-deterministic,
+                            multi-agent environment.
                         </li>
                     </ol>
-                
+
                 <b>Current progress</b>
                     <hr>
                     <ol>
                         <li>
-                            Built an environment using an open-source digital implementation of 
-                            Dominion for training and evaluation. 
+                            Built an environment using an open-source digital implementation of
+                            Dominion for training and evaluation.
                         </li>
                         <li>
-                            Experimented with different reward-shaping methods to guide agent learning. 
+                            Experimented with different reward-shaping methods to guide agent learning.
                         </li>
                     </ol>
-                
+
                 <b>Future plans</b>
                     <hr>
                     <ol>
                         <li>
-                            Refine the agent with advanced methods such as curriculum learning and 
-                            multi-head Q-networks. 
+                            Refine the agent with advanced methods such as curriculum learning and
+                            multi-head Q-networks.
                         </li>
                     </ol>
-                
+
                 <br>
                 <br>
 
@@ -119,34 +97,11 @@
 
     </div>
 
-    <footer>
-        <p>
-            <span id="last-updated">Last updated </span> • Site hosted with GitHub Pages
-        </p>
-    </footer>
+    <footer id="site-footer"></footer>
 
     <script src="/js/last-updated.js"></script>
-    <script>
-
-    const repoRelativePath = window.location.pathname.replace(/^\//, '');
-
-    updateLastUpdated({
-        elementId: 'last-updated',
-        owner: 'johnson-liu-repo',
-        repo: 'johnson-liu-repo.github.io',
-        filePath: repoRelativePath,
-        fallbackToNow: true
-    });
-    </script>
-
-    <script>
-    document.querySelectorAll("nav a").forEach(link => {
-        // Compare just the pathname (so query‑strings or domain don’t matter)
-        if (link.pathname === window.location.pathname) {
-        link.classList.add("active");
-        }
-    });
-    </script>
+    <script src="/js/components.js"></script>
+    <script>initSite();</script>
 
 </body>
 </html>
