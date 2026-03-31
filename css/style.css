@@ -166,6 +166,22 @@ header {
   background: #f5f5f5;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
+.content nav .nav-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d9d9d9;
+}
+.content nav .nav-logos img {
+  display: block;
+  max-width: 80px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 .content nav ul {
   list-style: none;
   margin: 0;
@@ -235,6 +251,13 @@ footer {
   .content nav {
     width: 100%;
     box-shadow: none;
+  }
+  .content nav .nav-logos {
+    justify-content: flex-start;
+    padding-bottom: 0.75rem;
+  }
+  .content nav .nav-logos img {
+    max-width: 72px;
   }
   .content nav a { padding: 0.75rem 1rem; }
   .content main {
