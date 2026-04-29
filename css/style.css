@@ -317,3 +317,141 @@ footer {
   width: 100%;
   height: 100%;
 }
+
+
+/*
+=============================================================
+            Johnson Liu Portfolio — Animation Patch
+============================================================= 
+*/
+
+/* ——— Keyframes ——— */
+@keyframes jl-fadeSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes jl-fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes jl-heroText {
+  from { opacity: 0; transform: translate(-50%, 12px); }
+  to   { opacity: 1; transform: translate(-50%, 0%); }
+}
+
+@keyframes jl-navSlide {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes jl-scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+
+/* ——— Hero ——— */
+.hero-img {
+  animation: jl-fadeIn 0.9s ease both;
+}
+.hero-img--left  { animation-delay: 0.05s; }
+.hero-img--right { animation-delay: 0.2s; }
+
+.hero-text {
+  /* Override existing positioning — keep it, just add animation */
+  animation: jl-heroText 0.75s cubic-bezier(0.23, 1, 0.32, 1) 0.35s both;
+}
+
+
+/* ——— Sidebar nav logos ——— */
+.nav-logo-img {
+  transition: transform 0.25s ease;
+}
+.nav-logo-img:hover {
+  transform: scale(1.1);
+}
+
+
+/* ——— Nav links — stagger + nudge ——— */
+.content nav li {
+  animation: jl-navSlide 0.35s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+.content nav li:nth-child(1) { animation-delay: 0.30s; }
+.content nav li:nth-child(2) { animation-delay: 0.35s; }
+.content nav li:nth-child(3) { animation-delay: 0.40s; }
+.content nav li:nth-child(4) { animation-delay: 0.45s; }
+.content nav li:nth-child(5) { animation-delay: 0.50s; }
+.content nav li:nth-child(6) { animation-delay: 0.55s; }
+.content nav li:nth-child(7) { animation-delay: 0.60s; }
+.content nav li:nth-child(8) { animation-delay: 0.65s; }
+.content nav li:nth-child(9) { animation-delay: 0.70s; }
+.content nav li:nth-child(10) { animation-delay: 0.75s; }
+
+/* Nudge right on hover (in addition to existing background) */
+.content nav a {
+  padding-left: 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+.content nav a:hover,
+.content nav a:focus {
+  padding-left: 1.375rem;
+}
+
+
+/* ——— Sections — stagger in ——— */
+section {
+  animation: jl-fadeSlideUp 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+section:nth-of-type(1) { animation-delay: 0.1s; }
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.3s; }
+section:nth-of-type(4) { animation-delay: 0.4s; }
+section:nth-of-type(5) { animation-delay: 0.5s; }
+
+
+/* ——— Project cards — stagger entrance ——— */
+.stagger-card {
+  animation: jl-fadeSlideUp 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* Cards within the first project grid */
+.project-grid:nth-of-type(1) .stagger-card:nth-child(1) { animation-delay: 0.25s; }
+.project-grid:nth-of-type(1) .stagger-card:nth-child(2) { animation-delay: 0.35s; }
+.project-grid:nth-of-type(1) .stagger-card:nth-child(3) { animation-delay: 0.45s; }
+.project-grid:nth-of-type(1) .stagger-card:nth-child(4) { animation-delay: 0.55s; }
+
+/* Subsequent grids */
+.project-grid:nth-of-type(2) .stagger-card:nth-child(1) { animation-delay: 0.5s; }
+.project-grid:nth-of-type(2) .stagger-card:nth-child(2) { animation-delay: 0.6s; }
+.project-grid:nth-of-type(3) .stagger-card:nth-child(1) { animation-delay: 0.65s; }
+.project-grid:nth-of-type(3) .stagger-card:nth-child(2) { animation-delay: 0.75s; }
+
+
+/* ——— Card hover — enhanced ——— */
+.project-card {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.project-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Thumbnail zoom on card hover */
+.project-card img {
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+.project-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Card title color shift on hover */
+.project-card h3 {
+  transition: color 0.2s ease;
+}
+.project-card:hover h3 {
+  color: var(--primary);   /* teal → navy */
+}
